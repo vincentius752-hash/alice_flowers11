@@ -14,7 +14,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        html{
+        html {
             scroll-behavior: smooth;
         }
 
@@ -84,7 +84,7 @@
         }
 
         #about {
-            background: #E9D7C5;
+            background: #F7E4D0;
             height: 100vh;
 
         }
@@ -97,10 +97,47 @@
             height: 13vh;
         }
 
+
+        #about .container {
+            display: flex;
+            height: 87vh;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #about .container .item1 {
+            width: 200px;
+        }
+
+        #about .container .item1 .img2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        #about .container .item2 {
+            flex: 1;
+            padding: 5px;
+        }
+
+        #about .container .item2 h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #7a2e45;
+            text-align: center;
+        }
+
+        #about .container .item2 p {
+            color: #333333;
+        }
+
         #store {
-            background: #8800ff;
+            background: linear-gradient(130deg, #F7E4D0, #D7E9E5, #ffe9f4);
             height: 100vh;
         }
+
 
 
         @media screen and (min-width:680px) {
@@ -122,6 +159,28 @@
             nav {
                 display: flex;
                 justify-content: center;
+            }
+            nav a{
+                transition: 1s ease;
+            }
+
+            nav a:hover {
+                background: #f3c6cf;
+                color: #7a2e45;
+            }
+
+            #about .container .item2 {
+                max-width: 700px;
+            }
+
+            #about .container {
+                gap: 50px;
+            }
+
+            #about .container .item2 p {
+                font-size: 25px;
+                color: #333333;
+                text-align: center;
             }
 
 
@@ -158,6 +217,20 @@
 
     <section id="about">
         <div class="img1"></div>
+        <div class="container">
+            <div class="item1">
+                <img class="img2" src="image/gambar2.png" alt="gambar2">
+            </div>
+            <div class="item2">
+                <h1>Selamat Datang di @alice_flowers11</h1>
+                <p>💐 Toko bunga yang menyediakan rangkaian bunga cantik dengan balutan satin elegan, menggunakan fresh
+                    flowers dan bisa ditambahkan polaroid untuk kesan lebih personal.</p>
+                <p>💰 Harga mulai dari 10K sehingga tetap terjangkau untuk berbagai momen spesial.</p>
+                <p>🛵 Tersedia layanan ambil langsung atau COD.</p>
+                <p>📍 Lokasi: Jl. Mawar Ledok, Ledug, Prigen RT 002 RW 002<br>
+                    Melayani area: Pandaan – Prigen – Tretes – Purwosari.</p>
+            </div>
+        </div>
 
 
     </section>
