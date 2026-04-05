@@ -7,212 +7,33 @@
     <title>Alice Flower</title>
     <link rel="website icon" type="png" href="image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: whitesmoke;
-        }
-
-        #home {
-            background: url(image/snapedit_1772850265826.jpg) no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #home header {
-            text-align: center;
-        }
-
-        #home header h1 {
-            font-size: 4em;
-            word-spacing: 4px;
-            letter-spacing: 3px;
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(90deg, #b84a6a, #f3c6cf);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200%;
-            animation: gradientMove 6s ease infinite;
-        }
-
-
-        .wrapper1 {
-            width: 100%;
-            max-width: 780px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            color: #b84a6a;
-            padding: 10px;
-            border-radius: 20px;
-        }
-
-        nav a:hover {
-            background: #f3c6cf;
-            color: #7a2e45;
-        }
-
-        #about {
-            background: #F7E4D0;
-            height: 100vh;
-
-        }
-
-        #about .img1 {
-            background: url(image/gambar1.jpeg) no-repeat;
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: 13vh;
-        }
-
-
-        #about .container {
-            display: flex;
-            height: 87vh;
-            align-items: center;
-            gap: 5px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        #about .container .item1 {
-            width: 200px;
-        }
-
-        #about .container .item1 .img2 {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        #about .container .item2 {
-            flex: 1;
-            padding: 5px;
-        }
-
-        #about .container .item2 h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #7a2e45;
-            text-align: center;
-        }
-
-        #about .container .item2 p {
-            color: #333333;
-        }
-
-        #store {
-            background: linear-gradient(130deg, #F7E4D0, #D7E9E5, #ffe9f4);
-            height: 100vh;
-        }
-
-
-
-        @media screen and (min-width:680px) {
-
-            .wrapper1 {
-                border-radius: 20px;
-            }
-
-            nav ul {
-                display: flex;
-                justify-content: center;
-                flex: 1 1 0;
-            }
-
-            nav li {
-                flex: 1 1 0;
-            }
-
-            nav {
-                display: flex;
-                justify-content: center;
-            }
-            nav a{
-                transition: 1s ease;
-            }
-
-            nav a:hover {
-                background: #f3c6cf;
-                color: #7a2e45;
-            }
-
-            #about .container .item2 {
-                max-width: 700px;
-            }
-
-            #about .container {
-                gap: 50px;
-            }
-
-            #about .container .item2 p {
-                font-size: 25px;
-                color: #333333;
-                text-align: center;
-            }
-
-
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0%;
-            }
-
-            100% {
-                background-position: 200%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section id="home">
-        <div class="wrapper1">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#store">Store</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <!-- Video Background -->
+        <video autoplay muted loop id="bgVideo">
+            <source src="image/video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <!-- Content di atas video -->
+        <div class="homeContent">
+            <div class="wrapper1">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#store">Store</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <header>
+                <h1>Alice Flower</h1>
+            </header>
         </div>
-        <header>
-            <h1>Alice Flower</h1>
-        </header>
     </section>
 
     <section id="about">
@@ -231,14 +52,49 @@
                     Melayani area: Pandaan – Prigen – Tretes – Purwosari.</p>
             </div>
         </div>
-
-
     </section>
 
     <section id="store">
+        <div class="container-grid">
+            <h1>Store</h1>
 
+            <div class="card1">
+                <img src="image/gambar3.png" alt="gambar3">
+                <h3 style="text-align: center;">Produk 1</h3>
+                <p>bunga putih</p>
+                <p><b>IDR 40.000</b></p>
+                <a href="https://wa.me/628113479889?text=Halo saya ingin membeli produk pertama ini. saya ingin bertanya lebih lanjut tentang produk ini. terimakasih" target="_blank">
+                    <button>Buy</button>
+                </a>
+            </div>
+            <div class="card2">
+                <img src="image/gambar4.png" alt="gambar4">
+                <h3 style="text-align: center;">Produk 2</h3>
+                <p>bunga pink</p>
+                <p><b>IDR 40.000</b></p>
+                <a href="https://wa.me/628113479889?text=Halo saya ingin membeli produk kedua ini. saya ingin bertanya lebih lanjut tentang produk ini. terimakasih" target="_blank">
+                    <button>Buy</button>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact">
+        <div class="container-grid">
+            <h1 style="color: whitesmoke;">Contact Us</h1>
+            <p style="color: whitesmoke; text-align: center;">Hubungi kami untuk informasi lebih lanjut atau pemesanan!</p>
+            <div class="social-links">
+                <div class="social-item">
+                    <img src="image/instagram.png" alt="Instagram">
+                    <a href="https://www.instagram.com/alice_flowers11?igsh=MTJuYTN3a2c4ZThvZA" target="_blank">Instagram</a>
+                </div>
+                <div class="social-item">
+                    <img class="wa-img" src="image/wa-removebg-preview.png" alt="WhatsApp">
+                    <a href="https://wa.me/628113479889" target="_blank">WhatsApp</a>
+                </div>
+                <p style="color: whitesmoke; text-align: center;">&copy; Alice Flower</p>
+            </div>
+        </div>
     </section>
 </body>
-
 </html>
